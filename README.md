@@ -24,7 +24,7 @@ composer install
 cp .env.example .env
 php artisan key:generate
 
-# Setup database
+# Setup  database
 php artisan migrate
 
 # Install frontend dependencies (Tailwind CSS)
