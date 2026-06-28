@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}?v=2" />
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/animate.css') }}?v=2" />
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/font-awesome.css') }}?v=2" />
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/flaticon.css') }}?v=2" />
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/themify-icons.css') }}?v=2" />
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/slick.css') }}?v=2" />
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/prettyPhoto.css') }}?v=2" />
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/shortcodes.css') }}?v=2" />
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/main.css') }}?v=2" />
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/megamenu.css') }}?v=2" />
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/responsive.css') }}?v=2" />
