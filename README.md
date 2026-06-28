@@ -18,7 +18,7 @@ A modern **Laravel 12** web application for sharing, discovering, and monetizing
 cd "e:/Project GIL/Marketplace Platform"
 
 # Install PHP dependencies
-composer install
+composer  install
 
 # Setup environment
 cp .env.example .env
