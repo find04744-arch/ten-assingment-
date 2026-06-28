@@ -25,7 +25,7 @@ cp .env.example .env
 php artisan key:generate
 
 # Setup database
-php artisan migrate
+php artisan  migrate
 
 # Install frontend dependencies (Tailwind CSS)
 npm install
