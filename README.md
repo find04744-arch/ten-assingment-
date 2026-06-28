@@ -55,7 +55,7 @@ Visit `http://localhost:8000` in your browser.
 
 - ✅ User registration and login
 - ✅ Session-based authentication
-- ✅ Role-based access control (User, Creator, Admin)
+- ✅ Role-based access control  (User, Creator, Admin)
 
 ### Prompt Management
 
