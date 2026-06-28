@@ -7,7 +7,7 @@ A modern **Laravel 12** web application for sharing, discovering, and monetizing
 ### Prerequisites
 
 - PHP 8.2+
-- MySQL 8.0+
+- MySQL  8.0+
 - Composer
 - npm/node.js (for Tailwind CSS and Vite)
 
