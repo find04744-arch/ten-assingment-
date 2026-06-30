@@ -12,6 +12,22 @@ use App\Http\Controllers\Api\DashboardController;
 use App\Http\Controllers\Api\AdminController;
 use App\Http\Controllers\Api\UserController;
 
+// ── DATABASE MIGRATION ROUTE (SESSIONS BYPASS) ──
+Route::get('/run-migrate', function () {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('migrate:fresh --force');
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Database migrated successfully! All tables are created.'
+        ]);
+    } catch (\Exception $e) {
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Error migrating database: ' . $e->getMessage()
+        ], 500);
+    }
+});
+
 Route::get('/health', function () {
     return response()->json(['status' => 'ok']);
 });

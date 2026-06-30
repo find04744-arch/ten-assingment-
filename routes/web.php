@@ -5,16 +5,6 @@ use App\Http\Controllers\PromptController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminController;
 
-// ── DATABASE MIGRATION ROUTE (FOR RENDER DEPLOYMENT) ──
-Route::get('/run-migrate', function () {
-    try {
-        \Illuminate\Support\Facades\Artisan::call('migrate:fresh --force');
-        return "Database migrated successfully! All tables are created.";
-    } catch (\Exception $e) {
-        return "Error migrating database: " . $e->getMessage();
-    }
-});
-
 // Public routes
 Route::get('/', [PromptController::class, 'index'])->name('home');
 Route::get('/prompts', [PromptController::class, 'allPrompts'])->name('prompts.all');
@@ -75,7 +65,6 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     Route::post('/users', [AdminController::class, 'storeUser'])->name('users.store');
     Route::get('/users/{user}/edit', [AdminController::class, 'editUser'])->name('users.edit');
     Route::put('/users/{user}', [AdminController::class, 'updateUser'])->name('users.update');
-    // Rule alignment: formatting adjusted cleanly
     Route::put('/users/{id}/role', [AdminController::class, 'updateUserRole'])->name('users.update-role');
     Route::delete('/users/{id}', [AdminController::class, 'deleteUser'])->name('users.delete');
 
