@@ -39,4 +39,4 @@ RUN chmod -R 775 /var/www/storage /var/www/bootstrap/cache \
 # Expose port 80
 EXPOSE 80
 
-CMD service nginx start && php-fpm
+CMD php artisan route:clear && php artisan config:clear && php artisan migrate --force && service nginx start && php-fpm
