@@ -32,6 +32,10 @@ RUN composer install --no-interaction --optimize-autoloader --no-dev
 # Setup Nginx configuration
 COPY ./nginx.conf /etc/nginx/sites-available/default
 
+# ── Storage এবং Cache ফোল্ডারের পারমিশন ঠিক করা ──
+RUN chmod -R 775 /var/www/storage /var/www/bootstrap/cache \
+    && chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+
 # Expose port 80
 EXPOSE 80
 
